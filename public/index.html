@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2f5ef">
+    <title>Certifica | Asistente</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Certifica, inicio">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span class="brand-name">certifica<span>.</span></span>
+        </a>
+        <div class="topbar-context">
+          <span class="context-dot" aria-hidden="true"></span>
+          <span>Asistente de certificación</span>
+        </div>
+      </header>
+
+      <main class="chat-shell">
+        <section class="conversation" aria-label="Conversación">
+          <div class="conversation-heading">
+            <p class="eyebrow">CONSULTA</p>
+            <h1>¿En qué te puedo orientar?</h1>
+          </div>
+
+          <div class="messages" id="messages" aria-live="polite" aria-relevant="additions text">
+            <article class="message assistant-message">
+              <span class="message-avatar" aria-hidden="true">C</span>
+              <div class="message-content">
+                <p class="message-author">Certifica <span>Asistente</span></p>
+                <p class="message-text">Hola. ¿Qué tema de certificación quieres revisar?</p>
+              </div>
+            </article>
+          </div>
+          <p class="typing-indicator" id="typing-indicator" role="status" hidden>Escribiendo…</p>
+        </section>
+
+        <form class="composer" id="chat-form">
+          <label class="visually-hidden" for="message-input">Escribe tu mensaje</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            maxlength="2000"
+            placeholder="Escribe tu consulta..."
+            autocomplete="off"
+            required
+          ></textarea>
+          <button class="send-button" id="send-button" type="submit">
+            <span>Enviar</span>
+            <span class="send-arrow" aria-hidden="true">&#8599;</span>
+          </button>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
