@@ -3,6 +3,16 @@ import express from "express";
 import { AIProjectClient } from "@azure/ai-projects";
 import { DefaultAzureCredential } from "@azure/identity";
 
+/*
+
+SDK: Software Development Kit 
+AIProjectClient: Para todo tipo de agente o servicio de Microsoft Foundry
+  - Este usa el endpoint del proyecto
+AzureOpenAIClient: Para el modelo GPT de Microsoft Foundry
+  - Este usa el endpoint del agente
+
+*/
+
 const app = express();
 const port = Number(process.env.PORT) || 3000;
 const agentName = process.env.FOUNDRY_AGENT_NAME;
